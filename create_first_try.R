@@ -1,0 +1,7 @@
+library(sf)
+library(mapview)
+library(esri2sf)
+mapviewOptions(fgb = FALSE)
+shp <- esri2sf("https://services.arcgis.com/IYUfZFmrlf94i3k0/ArcGIS/rest/services/%D7%90%D7%96%D7%95%D7%A8%D7%99_%D7%AA%D7%A0%D7%95%D7%A2%D7%94_%D7%9E%D7%98%D7%A8%D7%95%D7%A4%D7%95%D7%9C%D7%99%D7%9F_%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D/FeatureServer/0")
+mapview(shp)
+mapshot(mapview(shp),"first_try.html")
